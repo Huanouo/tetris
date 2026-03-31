@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>俄羅斯方塊</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>俄羅斯方塊</h1>
+    </header>
+
+    <div id="game-layout">
+      <!-- 主遊戲畫布 -->
+      <canvas id="board" width="300" height="600"></canvas>
+
+      <!-- 右側面板 -->
+      <aside id="panel">
+        <section class="panel-section">
+          <h2>下一個</h2>
+          <canvas id="next-piece" width="120" height="120"></canvas>
+        </section>
+
+        <section class="panel-section">
+          <h2>分數</h2>
+          <p id="score">0</p>
+        </section>
+
+        <section class="panel-section">
+          <h2>關卡</h2>
+          <p id="level">1</p>
+        </section>
+
+        <section class="panel-section">
+          <h2>消除行數</h2>
+          <p id="lines">0</p>
+        </section>
+
+        <section class="panel-section controls">
+          <h2>操作說明</h2>
+          <ul>
+            <li><kbd>←</kbd><kbd>→</kbd> 移動</li>
+            <li><kbd>↑</kbd> 旋轉</li>
+            <li><kbd>↓</kbd> 加速下落</li>
+            <li><kbd>Space</kbd> 硬下落</li>
+            <li><kbd>P</kbd> 暫停</li>
+          </ul>
+        </section>
+
+        <button id="start-btn">開始遊戲</button>
+      </aside>
+    </div>
+
+    <!-- 覆蓋層（遊戲開始前 / 結束 / 暫停） -->
+    <div id="overlay" class="visible">
+      <div id="overlay-content">
+        <h2 id="overlay-title">俄羅斯方塊</h2>
+        <p id="overlay-message">按「開始遊戲」或 Enter 開始</p>
+        <button id="overlay-btn">開始遊戲</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="tetris.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

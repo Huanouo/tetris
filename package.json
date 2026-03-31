@@ -1,0 +1,13 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "俄羅斯方塊遊戲 (Tetris) - TDD 開發，部署至 GitHub Pages",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
